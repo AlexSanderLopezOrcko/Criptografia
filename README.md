@@ -10,8 +10,6 @@ Para iniciar el proyecto asegúrate de tener instalado Python 3.10 o superior:
 python --version
 ```
 
-Este proyecto utiliza la biblioteca nativa `tkinter` (incluida por defecto en la instalación estándar de Python en Windows), por lo que no requiere dependencias externas adicionales.
-
 Para ejecutar la aplicación:
 
 ```bash

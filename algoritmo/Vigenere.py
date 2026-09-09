@@ -8,7 +8,7 @@ def AbrirCifradoVigenere(parent):
     ventana.transient(parent)
     ventana.grab_set()
 
-    def obtener_datos():
+    def ObtenerDatos():
         texto = TextoTK.get().upper().replace(" ", "")
         clave = ClaveTK.get().upper().replace(" ", "")
 
@@ -31,7 +31,7 @@ def AbrirCifradoVigenere(parent):
         return texto, clave
 
     def cifrar():
-        TextoACifrar, Clave = obtener_datos()
+        TextoACifrar, Clave = ObtenerDatos()
         if TextoACifrar is None:
             return
 
@@ -47,7 +47,7 @@ def AbrirCifradoVigenere(parent):
         messagebox.showinfo("Resultado", f"Texto cifrado: {TextoCifrado}", parent=ventana)
 
     def descifrar():
-        TextoADescifrar, Clave = obtener_datos()
+        TextoADescifrar, Clave = ObtenerDatos()
         if TextoADescifrar is None:
             return
 
@@ -70,8 +70,8 @@ def AbrirCifradoVigenere(parent):
     ClaveTK = tk.Entry(ventana)
     ClaveTK.pack()
 
-    frame_botones = tk.Frame(ventana)
-    frame_botones.pack(pady=15)
+    FrameBotones = tk.Frame(ventana)
+    FrameBotones.pack(pady=15)
 
-    tk.Button(frame_botones, text="Cifrar", command=cifrar, width=10).pack(side=tk.LEFT, padx=5)
-    tk.Button(frame_botones, text="Descifrar", command=descifrar, width=10).pack(side=tk.LEFT, padx=5)
+    tk.Button(FrameBotones, text="Cifrar", command=cifrar, width=10).pack(side=tk.LEFT, padx=5)
+    tk.Button(FrameBotones, text="Descifrar", command=descifrar, width=10).pack(side=tk.LEFT, padx=5)

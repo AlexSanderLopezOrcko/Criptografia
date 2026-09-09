@@ -8,7 +8,7 @@ def AbrirCifradoRailFence(parent):
     ventana.transient(parent)
     ventana.grab_set()
 
-    def obtener_datos():
+    def ObtenerDatos():
         try:
             rieles = int(NumeroDeRieles.get())
         except ValueError:
@@ -31,7 +31,7 @@ def AbrirCifradoRailFence(parent):
         return rieles, texto
 
     def cifrar():
-        NumeroRieles, TextoACifrar = obtener_datos()
+        NumeroRieles, TextoACifrar = ObtenerDatos()
         if NumeroRieles is None:
             return
 
@@ -55,7 +55,7 @@ def AbrirCifradoRailFence(parent):
         messagebox.showinfo("Resultado", f"Texto cifrado: {TextoCifrado}", parent=ventana)
 
     def descifrar():
-        NumeroRieles, TextoADescifrar = obtener_datos()
+        NumeroRieles, TextoADescifrar = ObtenerDatos()
         if NumeroRieles is None:
             return
 
@@ -102,8 +102,8 @@ def AbrirCifradoRailFence(parent):
     TextoTK = tk.Entry(ventana)
     TextoTK.pack()
 
-    frame_botones = tk.Frame(ventana)
-    frame_botones.pack(pady=15)
+    FrameBotones = tk.Frame(ventana)
+    FrameBotones.pack(pady=15)
 
-    tk.Button(frame_botones, text="Cifrar", command=cifrar, width=10).pack(side=tk.LEFT, padx=5)
-    tk.Button(frame_botones, text="Descifrar", command=descifrar, width=10).pack(side=tk.LEFT, padx=5)
+    tk.Button(FrameBotones, text="Cifrar", command=cifrar, width=10).pack(side=tk.LEFT, padx=5)
+    tk.Button(FrameBotones, text="Descifrar", command=descifrar, width=10).pack(side=tk.LEFT, padx=5)
